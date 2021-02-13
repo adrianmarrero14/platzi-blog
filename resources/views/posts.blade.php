@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ $post->title }}</h5>
                     <p class="card-text">
-                        {{ $post->get_excerpt }}
+                        {{ $post->get_excerpt }}...
                         <a href="{{ route('post', $post) }}">Leer Más</a>
                     </p>
                     <p class="text-muted mb-0">
@@ -22,7 +22,7 @@
                 </div>
             </div>
             @endforeach
-            
+            {{ $posts->links() }}
         </div>
     </div>
 </div>
